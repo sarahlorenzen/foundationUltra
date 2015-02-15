@@ -1,0 +1,23 @@
+{
+  "name": "foundationUltra",
+  "version": "1.0.0",
+  "homepage": "https://github.com/RelutionDev/foundationUltra",
+  "authors": [
+    "jjdemitriuk <jj.demitri.15@gmail.com>"
+  ],
+  "description": "Foundation Maxed Out",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.0.2",
+    "foundation": "~5.5.1",
+    "angular-foundation": "~0.5.1"
+  }
+}

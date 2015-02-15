@@ -1,0 +1,19 @@
+{
+  "name": "foundationUltra",
+  "version": "1.0.0",
+  "description": "Foundation Maxed Out",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RelutionDev/foundationUltra.git"
+  },
+  "author": "jjdemitriuk - jj.demitri@relution.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RelutionDev/foundationUltra/issues"
+  },
+  "homepage": "https://github.com/RelutionDev/foundationUltra"
+}
