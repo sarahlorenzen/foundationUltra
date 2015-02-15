@@ -15,6 +15,7 @@
     <!-- Here we will include foundation-apps-->
     <link href="css/foundationApps.css" rel="stylesheet" type="text/css">
 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
      <!-- Services -->
     <script src="js/angular/services/foundation.core.js"></script>
     <!-- Foundation Components -->
@@ -32,7 +33,11 @@
 
     <script src="js/angular/foundation.js"></script>
     <script src="js/angular/app.js"></script>
-
+ <style>
+    .menu-bar {margin-bottom: 0;}
+    #sub-nav, .messages {border-right: 1px solid #eee;}
+    .medium-grid-content {padding:1rem !important;}
+  </style>
   </head>
   <body>
     
@@ -67,49 +72,124 @@
   </top-bar>
 </div>
 
+ <div class="grid-frame vertical">
+      <div class="primary title-bar">
+        <div class="center title"><a ui-sref="home">zMail</a></div>
+        <span class="right"><a ui-sref="settings">Settings</a></span>
+      </div>
+      <div ui-view class="grid-block">
+		<div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-3 medium-grid-content">
+	<a class="button expand" zf-open="compose">Compose</a>
+	<section class="block-list with-icons">
+	  <ul>
+	  	<li class="hide-for-medium">
+	  		<img src="http://placehold.it/1x1" alt="">
+	      <a zf-close="sub-nav">Close</a>
+	    </li>
+	    <li>
+	    	<img src="http://placehold.it/1x1" alt="">
+	      <a href="#">Inbox</a>
+	    </li>
+	    <!-- With an icon -->
+	    <li>
+	      <img src="http://placehold.it/1x1" alt="">
+	      <a href="#">Sent Messages</a>
+	    </li>
+	    <li>
+	    	<img src="http://placehold.it/1x1" alt="">
+	    	<a href="#">Favorited</a>
+	    </li>
+	  </ul>
+	</section>
+</div>
+
+<div class="small-12 medium-3 messages grid-content">
+  <a class="button secondary expand hide-for-medium" zf-open="sub-nav">This</a>
+  <section class="block-list">
+  	<li>
+  		<input type="text" placeholder="Search">
+   	</l1>
+		<li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+  </section>
+</div>
+
+<div zf-panel id="message" position="right" class="fast bounceInOut small-12 medium-6 medium-grid-content">
+  <a class="hide-for-medium button tiny" zf-close="message">Back</a>
+  <h2>This is a message</h2>
+  <p>Mike Meyers - 6/12/2014</p>
+  <hr />
+  <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	</p>
+	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	</p>
+	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	</p>
+	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	</p>
+</div>
+
+<!-- Start Compose Message -->
+<zf-modal overlay="true" id="compose">
+	<div class="grid-block vertical">
+		<div class="primary title-bar">
+			<div class="center title">Compose Message</div>
+			<span class="left"><a zf-close="compose" href="#">Cancel</a></span>
+			<span class="right"><a href="#">Send</a></span>
+		</div>
+		<div class="grid-content">
+			<label>Email
+        <input type="text" placeholder="email@zmail.com" />
+      </label>
+			<label>Message
+        <textarea placeholder="hello..."></textarea>
+      </label>
+		</div>
+		</div>
+	</div>
+</zf-modal>
+<!-- End Compose Message -->
+      </div>
+    </div>
+
+
 <script>
   angular.module('application').controller('topBar', function ($scope) {
 });
 </script>
-
-	<div class="grid-frame vertical">
-		<div class="grid-content shrink" style="padding: 0;">
-		    <div class="primary title-bar">
-		        <span class="left title"><a href="#">foundationUltra</a></span>
-		    </div>
-		</div> 
-		<div class="grid-block">
-			<div class="grid-block vertical text-center" style="background:#008cba; padding:5%;">
-				<h1>foundationUltra</h1>
-				<p>FoundationUltra is a product from relutionDev combining both foundationApps and foundationSites.</p>
-				<p>FoundationUltra is still very much in beta as there are some angular kinks to work out but untill then most elements seem to be working. If you resize the page you should see the topbar change with it whilst remaining functionional. Since ive seen alot of people ask about this on the forum it has been at the top of my todo list.</p>
-			</div>
-			<div class="grid-block vertical text-center" style="background:#eeeeee; padding:5%;">				
-				<h3>So Whats been Done</h3>
-				<p>A bit of knowlege is required here so il give it to you. Foundation for sites uses jquery plugins and code to produce some of its responsive elements were as foundation for apps uses angular to modularise elements and animate/ control them. This means that without alot of refractoring foundationSites and foundationApps are incompatible with each other. But there was hope I had remembered reading about and angular port of foundationSites and so the fun began since then I have:</p>
-				<dl>
-					<dt>Creating a static version of foundationApps</dt>
-					<dd>Since foundationApps uses gulp to run on a test server during developement it specifies load_paths for the required angular and foundation apps scripts. To get around this I just declared the scripts into the header of the page including foundation.core and all of the foundation components</dd>
-					<dt>Removed All angular routing</dt>
-					<dd>Since the project I will be using this for will not contain angular for the MVC part of the application this part was not needed and so removed</dd>
-					<dt>Pulled in angular foundation aswell as foundationSites</dt>
-					<dd></dd>
-				</dl>
-			</div>
-		</div>
-		<div class="block-grid shrink" style="background:#333333; padding:5%;">
-			<div class="block-content vertical text-center">
-				<h3>relutionDev</h3>
-				<ul class="inline-list">
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-
-
   </body>
 </html>

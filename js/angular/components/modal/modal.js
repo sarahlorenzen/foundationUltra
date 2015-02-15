@@ -1,6 +1,10 @@
 (function() {
   'use strict';
 
+    // Added this to make angular components more agile in location
+  var scripts = document.getElementsByTagName("script")
+  var currentScriptPath = scripts[scripts.length - 1].src;
+
   angular.module('foundation.modal', ['foundation.core'])
     .directive('zfModal', modalDirective);
 
@@ -10,7 +14,7 @@
 
     var directive = {
       restrict: 'EA',
-      templateUrl: 'components/modal/modal.html',
+      templateUrl: currentScriptPath.replace('modal.js', 'modal.html'),
       transclude: true,
       scope: true,
       replace: true,
