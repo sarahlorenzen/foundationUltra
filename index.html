@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>FoundationUltra | by relutionDev</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
     <Script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
     <!-- Angular Components -->
@@ -15,6 +15,7 @@
     <!-- Here we will include foundation-apps-->
     <link href="css/foundationApps.css" rel="stylesheet" type="text/css">
 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
      <!-- Services -->
     <script src="js/angular/services/foundation.core.js"></script>
     <!-- Foundation Components -->
@@ -32,17 +33,21 @@
 
     <script src="js/angular/foundation.js"></script>
     <script src="js/angular/app.js"></script>
-
+ <style>
+    .menu-bar {margin-bottom: 0;}
+    #sub-nav, .messages {border-right: 1px solid #eee;}
+    .medium-grid-content {padding:1rem !important;}
+  </style>
   </head>
   <body>
     
 
 
-<div ng-controller="topBar" class="sticky">
+<div ng-controller="topBar" class="sticky slideInDown">
   <top-bar class="sticky">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">My Site</a></h1>
+        <h1><a href="#">foundationUltra</a></h1>
       </li>
       <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
     </ul>
@@ -59,101 +64,136 @@
         </li>
       </ul>
 
-      <!-- Left Nav Section -->
+      <!-- Left Nav Section 
       <ul class="left">
         <li><a href="#">Left</a></li>
-      </ul>
+      </ul>-->
     </top-bar-section>
   </top-bar>
 </div>
+
+ <div class="grid-frame vertical">
+      <div class="primary title-bar">
+        <div class="center title"><a ui-sref="home">zMail</a></div>
+        <span class="right"><a ui-sref="settings">Settings</a></span>
+      </div>
+      <div ui-view class="grid-block">
+		<div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-3 medium-grid-content">
+	<a class="button expand" zf-open="compose">Compose</a>
+	<section class="block-list with-icons">
+	  <ul>
+	  	<li class="hide-for-medium">
+	  		<img src="http://placehold.it/1x1" alt="">
+	      <a zf-close="sub-nav">Close</a>
+	    </li>
+	    <li>
+	    	<img src="http://placehold.it/1x1" alt="">
+	      <a href="#">Inbox</a>
+	    </li>
+	    <!-- With an icon -->
+	    <li>
+	      <img src="http://placehold.it/1x1" alt="">
+	      <a href="#">Sent Messages</a>
+	    </li>
+	    <li>
+	    	<img src="http://placehold.it/1x1" alt="">
+	    	<a href="#">Favorited</a>
+	    </li>
+      <li>
+      <img src="http://placehold.it/1x1" alt="">
+      <a href="#" title="My notification" content="Notification example" color="success" position="top left" zf-notify="main-notifications">Let me Notify you</a>
+<zf-notification-set id="main-notifications"></zf-notification-set>
+      </li>
+      <li>
+      <img src="http://placehold.it/1x1" alt="">
+       <a href="#" zf-toggle="socialShare">Share The Word</a>
+        <zf-action-sheet id="socialShare">
+            <div zf-as-content="" position="right">
+            <p>Tap to share</p>
+            <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Mail</a></li>
+            </ul>
+            </div>
+        </zf-action-sheet>
+      </li>
+	  </ul>
+	</section>
+</div>
+
+<div class="small-12 medium-3 messages grid-content">
+  <a class="button secondary expand hide-for-medium" zf-open="sub-nav">This</a>
+  <section class="block-list">
+  	<li>
+  		<input type="text" placeholder="Search">
+   	</l1>
+		<li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	  <li>
+	    <a zf-toggle="message">
+	    	<h5>This is a message</h5>
+	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+	    </a>
+	  </li>
+	</section>
+</div>
+
+<div zf-panel id="message" position="right" class="fast spinIn linear wiggle small-12 medium-6 medium-grid-content">
+  <a class="hide-for-medium button tiny" zf-close="message">Back</a>
+  <h2>A Message from the Coder</h2>
+  <p>jjdemtiriuk @ relutionDev - 15/02/2015</p>
+  <hr />
+  <p>Welcome to foundationUltra here is our demo to show off some of the elements that foundationUltra has to offer from not only foundationApps such as the new flexbox grid but also foundationSites and angular-foundation aswell as increasing the range of icons by using font-awesome
+	</p>
+	<p>If you are viewing this on a desktop then you should see 3 columns of data, a sidebar the messages and then this panel. If you make the screen smaller or view this on your phone or tablet then you will see the magic happen, the topbar will turn into its famous mobile format aswell as the new elements such as the side bar turning in offcanvas panel that slide on. Go on give it a try
+	</p>
+	<p>Heres What included: (So Far)
+  <ul>
+    <li>The new flexbox grid<li>
+  </ul>
+	</p>
+	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	</p>
+</div>
+
+<!-- Start Compose Message -->
+<zf-modal overlay="true" id="compose">
+	<div class="grid-block vertical">
+		<div class="primary title-bar">
+			<div class="center title">Compose Message</div>
+			<span class="left"><a zf-close="compose" href="#">Cancel</a></span>
+			<span class="right"><a href="#">Send</a></span>
+		</div>
+		<div class="grid-content">
+			<label>Email
+        <input type="text" placeholder="email@zmail.com" />
+      </label>
+			<label>Message
+        <textarea placeholder="hello..."></textarea>
+      </label>
+		</div>
+		</div>
+	</div>
+</zf-modal>
+<!-- End Compose Message -->
+      </div>
+    </div>
+
 
 <script>
   angular.module('application').controller('topBar', function ($scope) {
 });
 </script>
-
-<div class="grid-frame vertical">
-    <div class="grid-content shrink" style="padding: 0;">
-        <div class="primary title-bar">
-            <div class="center title">relutionDev</div>
-            <span class="left title"><a href="#">foundationUltra</a></span>
-            <span class="right"><a href="#">Right</a></span>
-        </div>
-    </div>
-    <div class="grid-block vertical shrink">
-    <div class="grid-block vertical shrink">
-    <div class="grid-content">
-    <div class="row">
-    <div class="large-5 large-centered columns">
-<h3>Notifications</h3>
-      <a class="button" href="#" zf-open="my-notify">Static Notification</a>
-          <zf-notification-static id="my-notify" title="My static notification">
-              <p>This notification is static, it works similarly to a programmatic with some subtle differences.</p>
-          </zf-notification-static>
-    </div>
-    </div>
-    
-    </div>  
-    </div>
-    <div class="grid-block">
-      
-
-<div ng-controller="AccordionDemoCtrl">
-  <label class="checkbox">
-    <input type="checkbox" ng-model="oneAtATime">
-    Open only one at a time
-  </label>
-
-  <accordion close-others="oneAtATime">
-    <accordion-group heading="Static Header, initially expanded" is-open="true">
-      This content is straight in the template.
-    </accordion-group>
-    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-      {{group.content}}
-    </accordion-group>
-    <accordion-group heading="Dynamic Body Content">
-      <p>The body of the accordion group grows to fit the contents</p>
-        <button class="button small" ng-click="addItem()">Add Item</button>
-        <div ng-repeat="item in items">{{item}}</div>
-    </accordion-group>
-    <accordion-group is-open="isopen">
-        <accordion-heading>
-            I can have markup, too! <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i>
-        </accordion-heading>
-        This is just some content to illustrate fancy headings.
-    </accordion-group>
-  </accordion>
-</div>
-
-<script>
-angular.module('application').controller('AccordionDemoCtrl', function($scope) {
-  $scope.oneAtATime = true;
-
-  $scope.groups = [
-    {
-      title: "Dynamic Group Header - 1",
-      content: "Dynamic Group Body - 1"
-    },
-    {
-      title: "Dynamic Group Header - 2",
-      content: "Dynamic Group Body - 2"
-    }
-  ];
-
-  $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-  $scope.addItem = function() {
-    var newItemNo = $scope.items.length + 1;
-    $scope.items.push('Item ' + newItemNo);
-  };
-});
-
-</script>
-
-    </div>   
-</div>
-</div>
-
-
   </body>
 </html>

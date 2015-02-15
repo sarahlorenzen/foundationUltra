@@ -1,6 +1,10 @@
 (function() {
   'use strict';
 
+    // Added this to make angular components more agile in location
+  var scripts = document.getElementsByTagName("script")
+  var currentScriptPath = scripts[scripts.length - 1].src;
+
   angular.module('foundation.panel', ['foundation.core'])
     .directive('zfPanel', zfPanel)
   ;
@@ -10,7 +14,7 @@
   function zfPanel(foundationApi) {
     var directive = {
       restrict: 'EA',
-      templateUrl: 'components/panel/panel.html',
+      templateUrl: currentScriptPath.replace('panel.js', 'panel.html'),
       transclude: true,
       scope: {
         position: '@?'
