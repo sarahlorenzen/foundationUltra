@@ -1,12 +1,12 @@
 # foundationUltra
 
-# About
+## About
 
 I LOVE Foundation and have been using it for about 4 years now, I love its flexibility, responsivness metro design as it makes a great base for responsive web applications and so when Zurb announced they were releasing a new version with an upgraded flexbox grid and more ! I was so happy, Up untill the point were I found out they were dropping quite alot of features such as the famous responsive topbar.
 
 To say the least this has annoyed me because my existing project used topbar as their main source of navigation throughout the site, and so I took it to hand to merge the 2 versions FoundationApps & FoundationSites to create foundationUltra
 
-# Features
+## Features
 
 - New Flex box grid
 - foundationApps Touch gestures
@@ -50,3 +50,36 @@ To say the least this has annoyed me because my existing project used topbar as 
 - foundationSites Keystrokes
 - foundationSites Panels (Going to rename contentPane)
 - foundationSites Tables
+- font-awesome to add more icons to the system as I think 24 isnt enough for the modern day web developer
+
+## Useage
+
+Simply Clone or Download this repo and unpack into your location everything at the momment is pretty stand alone and not very easy to edit as alot is statically coded rather than dynamic but im working on it 
+
+## Documentation
+
+Will such a large collection of components I can only do so much and documentation is not on the list untill stable and fully working including with easy workflow using grunt I have planned untill then documentation can be found
+
+Angular-Foundation >>> http://pineconellc.github.io/angular-foundation/
+
+Foundation Sites >>> http://foundation.zurb.com/docs/
+
+Foundation Apps >>> http://foundation.zurb.com/apps/docs/
+
+Font-awesome >>> http://fortawesome.github.io/Font-Awesome/
+
+## Demo
+
+Look [HERE](http://relutiondev.github.io/foundationUltra/)
+
+## Credits
+
+Credits in par really need to go to Zurb for Foundation both sites and apps aswell as pineconellc for the angular directives used to run foundationSites, im just the guy that put them all together :) and added other part (Like gradients built in coming soon)
+
+## Licence
+
+Licensed under [MIT](http://opensource.org/licenses/mit-license.php). Totally free for private or commercial projects.
+
+## Hire Me
+
+I'm available for freelance work. Remote worldwide or locally around Central Europe.
