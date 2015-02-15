@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>FoundationUltra | by relutionDev</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
     <Script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
     <!-- Angular Components -->
@@ -42,7 +42,7 @@
   <top-bar class="sticky">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">My Site</a></h1>
+        <h1><a href="#">foundationUltra</a></h1>
       </li>
       <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
     </ul>
@@ -59,10 +59,10 @@
         </li>
       </ul>
 
-      <!-- Left Nav Section -->
+      <!-- Left Nav Section 
       <ul class="left">
         <li><a href="#">Left</a></li>
-      </ul>
+      </ul>-->
     </top-bar-section>
   </top-bar>
 </div>
@@ -72,87 +72,43 @@
 });
 </script>
 
-<div class="grid-frame vertical">
-    <div class="grid-content shrink" style="padding: 0;">
-        <div class="primary title-bar">
-            <div class="center title">relutionDev</div>
-            <span class="left title"><a href="#">foundationUltra</a></span>
-            <span class="right"><a href="#">Right</a></span>
-        </div>
-    </div>
-    <div class="grid-block vertical shrink">
-    <div class="grid-block vertical shrink">
-    <div class="grid-content">
-    <div class="row">
-    <div class="large-5 large-centered columns">
-<h3>Notifications</h3>
-      <a class="button" href="#" zf-open="my-notify">Static Notification</a>
-          <zf-notification-static id="my-notify" title="My static notification">
-              <p>This notification is static, it works similarly to a programmatic with some subtle differences.</p>
-          </zf-notification-static>
-    </div>
-    </div>
-    
-    </div>  
-    </div>
-    <div class="grid-block">
-      
+	<div class="grid-frame vertical">
+		<div class="grid-content shrink" style="padding: 0;">
+		    <div class="primary title-bar">
+		        <span class="left title"><a href="#">foundationUltra</a></span>
+		    </div>
+		</div> 
+		<div class="grid-block">
+			<div class="grid-block vertical text-center" style="background:#008cba; padding:5%;">
+				<h1>foundationUltra</h1>
+				<p>FoundationUltra is a product from relutionDev combining both foundationApps and foundationSites.</p>
+				<p>FoundationUltra is still very much in beta as there are some angular kinks to work out but untill then most elements seem to be working. If you resize the page you should see the topbar change with it whilst remaining functionional. Since ive seen alot of people ask about this on the forum it has been at the top of my todo list.</p>
+			</div>
+			<div class="grid-block vertical text-center" style="background:#eeeeee; padding:5%;">				
+				<h3>So Whats been Done</h3>
+				<p>A bit of knowlege is required here so il give it to you. Foundation for sites uses jquery plugins and code to produce some of its responsive elements were as foundation for apps uses angular to modularise elements and animate/ control them. This means that without alot of refractoring foundationSites and foundationApps are incompatible with each other. But there was hope I had remembered reading about and angular port of foundationSites and so the fun began since then I have:</p>
+				<dl>
+					<dt>Creating a static version of foundationApps</dt>
+					<dd>Since foundationApps uses gulp to run on a test server during developement it specifies load_paths for the required angular and foundation apps scripts. To get around this I just declared the scripts into the header of the page including foundation.core and all of the foundation components</dd>
+					<dt>Removed All angular routing</dt>
+					<dd>Since the project I will be using this for will not contain angular for the MVC part of the application this part was not needed and so removed</dd>
+					<dt>Pulled in angular foundation aswell as foundationSites</dt>
+					<dd></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="block-grid shrink" style="background:#333333; padding:5%;">
+			<div class="block-content vertical text-center">
+				<h3>relutionDev</h3>
+				<ul class="inline-list">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-<div ng-controller="AccordionDemoCtrl">
-  <label class="checkbox">
-    <input type="checkbox" ng-model="oneAtATime">
-    Open only one at a time
-  </label>
-
-  <accordion close-others="oneAtATime">
-    <accordion-group heading="Static Header, initially expanded" is-open="true">
-      This content is straight in the template.
-    </accordion-group>
-    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-      {{group.content}}
-    </accordion-group>
-    <accordion-group heading="Dynamic Body Content">
-      <p>The body of the accordion group grows to fit the contents</p>
-        <button class="button small" ng-click="addItem()">Add Item</button>
-        <div ng-repeat="item in items">{{item}}</div>
-    </accordion-group>
-    <accordion-group is-open="isopen">
-        <accordion-heading>
-            I can have markup, too! <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i>
-        </accordion-heading>
-        This is just some content to illustrate fancy headings.
-    </accordion-group>
-  </accordion>
-</div>
-
-<script>
-angular.module('application').controller('AccordionDemoCtrl', function($scope) {
-  $scope.oneAtATime = true;
-
-  $scope.groups = [
-    {
-      title: "Dynamic Group Header - 1",
-      content: "Dynamic Group Body - 1"
-    },
-    {
-      title: "Dynamic Group Header - 2",
-      content: "Dynamic Group Body - 2"
-    }
-  ];
-
-  $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-  $scope.addItem = function() {
-    var newItemNo = $scope.items.length + 1;
-    $scope.items.push('Item ' + newItemNo);
-  };
-});
-
-</script>
-
-    </div>   
-</div>
-</div>
 
 
   </body>
