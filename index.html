@@ -1,210 +1,249 @@
 <!doctype html>
 <html lang="en" ng-app="application">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FoundationUltra | by relutionDev</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-    <Script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
-    <!-- Angular Components -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
-    <script src="https://code.angularjs.org/1.3.13/angular-animate.min.js"></script>
-    <!-- Foundation for sites stylesheet for angular-foundation -->
-    <link rel="stylesheet" href="css/foundation.min.css" />
-    <script src="js/mm-foundation-tpls.js"></script>
-    <!-- Here we will include foundation-apps-->
-    <link href="css/foundationApps.css" rel="stylesheet" type="text/css">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FoundationUltra | by relutionDev</title>
+        <meta name="description" content="FoundationUltra - FoundationApps & FoundationSites In Perfect Harmony">
+        <meta name="keywords" content="HTML, CSS, Java, AngularJs, HTML5, relutionDev, relution, development">
+        <meta name="author" content="jjdemitriuk @ RelutionDev">
 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-     <!-- Services -->
-    <script src="js/angular/services/foundation.core.js"></script>
-    <!-- Foundation Components -->
-    <script src="js/angular/components/accordion/accordion.js"></script>
-    <script src="js/angular/components/actionsheet/actionsheet.js"></script>
-    <script src="js/angular/components/common/common.js"></script>
-    <script src="js/angular/components/iconic/iconic.js"></script>
-    <script src="js/angular/components/interchange/interchange.js"></script>
-    <script src="js/angular/components/modal/modal.js"></script>
-    <script src="js/angular/components/notification/notification.js"></script>
-    <script src="js/angular/components/offcanvas/offcanvas.js"></script>
-    <script src="js/angular/components/panel/panel.js"></script>
-    <script src="js/angular/components/popup/popup.js"></script>
-    <script src="js/angular/components/tabs/tabs.js"></script>
+        <!-- Schema.org markup for Google+ -->        
+        <meta itemprop="name" content="FoundationUltra | by relutionDev">
+        <meta itemprop="description" content="FoundationUltra - FoundationApps & FoundationSites In Perfect Harmony">
+        <meta itemprop="image" content="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10480183_750722478315302_8535631500466562626_n.png?oh=1eebe066535565633ab2da8fd748c075&oe=555E8E76&__gda__=1431605418_2ee711853772dec6aabe5ea0af6256e7">
 
-    <script src="js/angular/foundation.js"></script>
-    <script src="js/angular/app.js"></script>
- <style>
-    .menu-bar {margin-bottom: 0;}
-    #sub-nav, .messages {border-right: 1px solid #eee;}
-    .medium-grid-content {padding:1rem !important;}
-  </style>
-  </head>
-  <body>
-    
+        <!-- Open Graph data -->
+        <meta property="profile:username" content="@relutionDev"/>
+        <meta property="og:title" content="FoundationUltra - FoundationApps & FoundationSites In Perfect Harmony"/>
+        <meta property="og:description" content="FoundationUltra - FoundationApps & FoundationSites In Perfect Harmony"/>
+        <meta property="og:image" content="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10480183_750722478315302_8535631500466562626_n.png?oh=1eebe066535565633ab2da8fd748c075&oe=555E8E76&__gda__=1431605418_2ee711853772dec6aabe5ea0af6256e7"/>
+        <meta property="og:url" content="http://relutiondev.github.io/foundationUltra/"/>
+        <meta property="og:site_name" content="foundationUltra"/>
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary"/>  <!-- Card type -->
+        <meta name="twitter:site" content="http://relutiondev.github.io/foundationUltra/"/>
+        <meta name="twitter:title" content="foundationUltra">
+        <meta name="twitter:description" content="FoundationUltra - FoundationApps & FoundationSites In Perfect Harmony"/>
+        <meta name="twitter:creator" content="relutionDev"/>
+        <meta name="twitter:image:src" content="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10480183_750722478315302_8535631500466562626_n.png?oh=1eebe066535565633ab2da8fd748c075&oe=555E8E76&__gda__=1431605418_2ee711853772dec6aabe5ea0af6256e7"/>
+        <meta name="twitter:domain" content="http://relutiondev.github.io/"/> 
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="The Name or Title Here">
+        <meta itemprop="description" content="This is the page description">
+        <meta itemprop="image" content="http://www.example.com/image.jpg">
 
 
-<div ng-controller="topBar" class="sticky slideInDown">
-  <top-bar class="sticky">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="#">foundationUltra</a></h1>
-      </li>
-      <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
-    </ul>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+        <!-- Angular Components -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
+        <script src="https://code.angularjs.org/1.3.13/angular-animate.min.js"></script>
+        <!-- Foundation for sites stylesheet for angular-foundation -->
+        <link rel="stylesheet" href="css/foundation.min.css" />
+        <script src="js/mm-foundation-tpls.js"></script>
+        <!-- Here we will include foundation-apps-->
+        <link href="css/foundationApps.css" rel="stylesheet" type="text/css">
 
-    <top-bar-section>
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li class="active"><a href="#">Active</a></li>
-        <li has-dropdown>
-          <a href="#">Dropdown</a>
-          <ul top-bar-dropdown>
-            <li><a href="#">First link in dropdown</a></li>
-          </ul>
-        </li>
-      </ul>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Services -->
+        <script src="js/angular/services/foundation.core.js"></script>
+        <!-- Foundation Components -->
+        <script src="js/angular/components/accordion/accordion.js"></script>
+        <script src="js/angular/components/actionsheet/actionsheet.js"></script>
+        <script src="js/angular/components/common/common.js"></script>
+        <script src="js/angular/components/iconic/iconic.js"></script>
+        <script src="js/angular/components/interchange/interchange.js"></script>
+        <script src="js/angular/components/modal/modal.js"></script>
+        <script src="js/angular/components/notification/notification.js"></script>
+        <script src="js/angular/components/offcanvas/offcanvas.js"></script>
+        <script src="js/angular/components/panel/panel.js"></script>
+        <script src="js/angular/components/popup/popup.js"></script>
+        <script src="js/angular/components/tabs/tabs.js"></script>
 
-      <!-- Left Nav Section 
-      <ul class="left">
-        <li><a href="#">Left</a></li>
-      </ul>-->
-    </top-bar-section>
-  </top-bar>
-</div>
+        <script src="js/angular/foundation.js"></script>
+        <script src="js/angular/app.js"></script>
+        <style>
+            .menu-bar {margin-bottom: 0;}
+            #sub-nav, .messages {border-right: 1px solid #eee;}
+            .medium-grid-content {padding:1rem !important;}
+        </style>
+    </head>
+    <body>
 
- <div class="grid-frame vertical">
-      <div class="primary title-bar">
-        <div class="center title"><a ui-sref="home">zMail</a></div>
-        <span class="right"><a ui-sref="settings">Settings</a></span>
-      </div>
-      <div ui-view class="grid-block">
-		<div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-3 medium-grid-content">
-	<a class="button expand" zf-open="compose">Compose</a>
-	<section class="block-list with-icons">
-	  <ul>
-	  	<li class="hide-for-medium">
-	  		<img src="http://placehold.it/1x1" alt="">
-	      <a zf-close="sub-nav">Close</a>
-	    </li>
-	    <li>
-	    	<img src="http://placehold.it/1x1" alt="">
-	      <a href="#">Inbox</a>
-	    </li>
-	    <!-- With an icon -->
-	    <li>
-	      <img src="http://placehold.it/1x1" alt="">
-	      <a href="#">Sent Messages</a>
-	    </li>
-	    <li>
-	    	<img src="http://placehold.it/1x1" alt="">
-	    	<a href="#">Favorited</a>
-	    </li>
-      <li>
-      <img src="http://placehold.it/1x1" alt="">
-      <a href="#" title="My notification" content="Notification example" color="success" position="top left" zf-notify="main-notifications">Let me Notify you</a>
-<zf-notification-set id="main-notifications"></zf-notification-set>
-      </li>
-      <li>
-      <img src="http://placehold.it/1x1" alt="">
-       <a href="#" zf-toggle="socialShare">Share The Word</a>
-        <zf-action-sheet id="socialShare">
-            <div zf-as-content="" position="right">
-            <p>Tap to share</p>
-            <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Mail</a></li>
-            </ul>
+
+
+        <div ng-controller="topBar" class="sticky slideInDown">
+            <top-bar class="sticky">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">foundationUltra</a></h1>
+                    </li>
+                    <li toggle-top-bar class="menu-icon"><a href="#">Menu</a></li>
+                </ul>
+
+                <top-bar-section>
+                    <!-- Right Nav Section -->
+                    <ul class="right">
+                        <li class="active"><a href="#">Active</a></li>
+                        <li has-dropdown>
+                            <a href="#">Dropdown</a>
+                            <ul top-bar-dropdown>
+                                <li><a href="#">First link in dropdown</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Left Nav Section 
+                    <ul class="left">
+                      <li><a href="#">Left</a></li>
+                    </ul>-->
+                </top-bar-section>
+            </top-bar>
+        </div>
+
+        <div class="grid-frame vertical">
+            <div class="primary title-bar">
+                <div class="center title"><a ui-sref="home">zMail</a></div>
+                <span class="right"><a ui-sref="settings">Settings</a></span>
             </div>
-        </zf-action-sheet>
-      </li>
-	  </ul>
-	</section>
-</div>
+            <div ui-view class="grid-block">
+                <div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-3 medium-grid-content">
+                    <a class="button expand" zf-open="compose">Compose</a>
+                    <section class="block-list with-icons">
+                        <ul>
+                            <li class="hide-for-medium">
+                                <img src="http://placehold.it/1x1" alt="">
+                                <a zf-close="sub-nav">Close</a>
+                            </li>
+                            <li>
+                                <img src="http://placehold.it/1x1" alt="">
+                                <a href="#">Inbox</a>
+                            </li>
+                            <!-- With an icon -->
+                            <li>
+                                <img src="http://placehold.it/1x1" alt="">
+                                <a href="#">Sent Messages</a>
+                            </li>
+                            <li>
+                                <img src="http://placehold.it/1x1" alt="">
+                                <a href="#">Favorited</a>
+                            </li>
+                            <li>
+                                <img src="http://placehold.it/1x1" alt="">
+                                <a href="#" title="My notification" content="Notification example" color="success" position="top left" zf-notify="main-notifications">Let me Notify you</a>
+                            <zf-notification-set id="main-notifications"></zf-notification-set>
+                            </li>
+                            <li>
+                                <img src="http://placehold.it/1x1" alt="">
+                                <a href="#" zf-toggle="socialShare">Share The Word</a>
+                            <zf-action-sheet id="socialShare">
+                                <div zf-as-content="" position="right">
+                                    <p>Tap to share</p>
+                                    <ul>
+                                        <li><a href="#">Twitter</a></li>
+                                        <li><a href="#">Facebook</a></li>
+                                        <li><a href="#">Mail</a></li>
+                                    </ul>
+                                </div>
+                            </zf-action-sheet>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
 
-<div class="small-12 medium-3 messages grid-content">
-  <a class="button secondary expand hide-for-medium" zf-open="sub-nav">This</a>
-  <section class="block-list">
-  	<li>
-  		<input type="text" placeholder="Search">
-   	</l1>
-		<li>
-	    <a zf-toggle="message">
-	    	<h5>This is a message</h5>
-	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-	    </a>
-	  </li>
-	  <li>
-	    <a zf-toggle="message">
-	    	<h5>This is a message</h5>
-	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-	    </a>
-	  </li>
-	  <li>
-	    <a zf-toggle="message">
-	    	<h5>This is a message</h5>
-	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-	    </a>
-	  </li>
-	</section>
-</div>
+                <div class="small-12 medium-3 messages grid-content">
+                    <a class="button secondary expand hide-for-medium" zf-open="sub-nav">This</a>
+                    <section class="block-list">
+                        <li>
+                            <input type="text" placeholder="Search">
+                            </l1>
+                        <li>
+                            <a zf-toggle="message">
+                                <h5>This is a message</h5>
+                                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a zf-toggle="message">
+                                <h5>This is a message</h5>
+                                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a zf-toggle="message">
+                                <h5>This is a message</h5>
+                                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
+                            </a>
+                        </li>
+                    </section>
+                </div>
 
-<div zf-panel id="message" position="right" class="fast spinIn linear wiggle small-12 medium-6 medium-grid-content">
-  <a class="hide-for-medium button tiny" zf-close="message">Back</a>
-  <h2>A Message from the Coder</h2>
-  <p>jjdemtiriuk @ relutionDev - 15/02/2015</p>
-  <hr />
-  <p>Welcome to foundationUltra here is our demo to show off some of the elements that foundationUltra has to offer from not only foundationApps such as the new flexbox grid but also foundationSites and angular-foundation aswell as increasing the range of icons by using font-awesome
-	</p>
-	<p>If you are viewing this on a desktop then you should see 3 columns of data, a sidebar the messages and then this panel. If you make the screen smaller or view this on your phone or tablet then you will see the magic happen, the topbar will turn into its famous mobile format aswell as the new elements such as the side bar turning in offcanvas panel that slide on. Go on give it a try
-	</p>
-	<p>Heres What included: (So Far)
-  <ul>
-    <li>The new flexbox grid<li>
-  </ul>
-	</p>
-	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
-	</p>
-</div>
+                <div zf-panel id="message" position="right" class="fast spinIn linear wiggle small-12 medium-6 medium-grid-content">
+                    <a class="hide-for-medium button tiny" zf-close="message">Back</a>
+                    <h2>A Message from the Coder</h2>
+                    <p>jjdemtiriuk @ relutionDev - 15/02/2015</p>
+                    <hr />
+                    <p>Welcome to foundationUltra here is our demo to show off some of the elements that foundationUltra has to offer from not only foundationApps such as the new flexbox grid but also foundationSites and angular-foundation aswell as increasing the range of icons by using font-awesome
+                    </p>
+                    <p>If you are viewing this on a desktop then you should see 3 columns of data, a sidebar the messages and then this panel. If you make the screen smaller or view this on your phone or tablet then you will see the magic happen, the topbar will turn into its famous mobile format aswell as the new elements such as the side bar turning in offcanvas panel that slide on. Go on give it a try
+                    </p>
+                    <p>Heres What included: (So Far)
+                    <ul>
+                        <li>The new flexbox grid<li>
+                    </ul>
+                    </p>
+                    <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+                    </p>
+                </div>
 
-<!-- Start Compose Message -->
-<zf-modal overlay="true" id="compose">
-	<div class="grid-block vertical">
-		<div class="primary title-bar">
-			<div class="center title">Compose Message</div>
-			<span class="left"><a zf-close="compose" href="#">Cancel</a></span>
-			<span class="right"><a href="#">Send</a></span>
-		</div>
-		<div class="grid-content">
-			<label>Email
-        <input type="text" placeholder="email@zmail.com" />
-      </label>
-			<label>Message
-        <textarea placeholder="hello..."></textarea>
-      </label>
-		</div>
-		</div>
-	</div>
-</zf-modal>
-<!-- End Compose Message -->
-      </div>
+                <!-- Start Compose Message -->
+                <zf-modal overlay="true" id="compose">
+                    <div class="grid-block vertical">
+                        <div class="primary title-bar">
+                            <div class="center title">Compose Message</div>
+                            <span class="left"><a zf-close="compose" href="#">Cancel</a></span>
+                            <span class="right"><a href="#">Send</a></span>
+                        </div>
+                        <div class="grid-content">
+                            <label>Email
+                                <input type="text" placeholder="email@zmail.com" />
+                            </label>
+                            <label>Message
+                                <textarea placeholder="hello..."></textarea>
+                            </label>
+                        </div>
+                    </div>
+            </div>
+        </zf-modal>
+        <!-- End Compose Message -->
     </div>
+</div>
 
 
 <script>
-  angular.module('application').controller('topBar', function ($scope) {
-});
+    angular.module('application').controller('topBar', function ($scope) {
+    });
 </script>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-59468118-2', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-59468118-2', 'auto');
+    ga('send', 'pageview');
 
 </script>
-  </body>
+</body>
 </html>
