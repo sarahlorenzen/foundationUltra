@@ -43,7 +43,7 @@
     
 
 
-<div ng-controller="topBar" class="sticky">
+<div ng-controller="topBar" class="sticky slideInDown">
   <top-bar class="sticky">
     <ul class="title-area">
       <li class="name">
@@ -101,8 +101,22 @@
 	    </li>
       <li>
       <img src="http://placehold.it/1x1" alt="">
-      <a class="button" href="#" title="My notification" content="Notification example" color="success" position="top left" zf-notify="main-notifications">Let me Notify you</a>
+      <a href="#" title="My notification" content="Notification example" color="success" position="top left" zf-notify="main-notifications">Let me Notify you</a>
 <zf-notification-set id="main-notifications"></zf-notification-set>
+      </li>
+      <li>
+      <img src="http://placehold.it/1x1" alt="">
+       <a href="#" zf-toggle="socialShare">Share The Word</a>
+        <zf-action-sheet id="socialShare">
+            <div zf-as-content="" position="right">
+            <p>Tap to share</p>
+            <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Mail</a></li>
+            </ul>
+            </div>
+        </zf-action-sheet>
       </li>
 	  </ul>
 	</section>
@@ -132,37 +146,22 @@
 	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
 	    </a>
 	  </li>
-	  <li>
-	    <a zf-toggle="message">
-	    	<h5>This is a message</h5>
-	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-	    </a>
-	  </li>
-	  <li>
-	    <a zf-toggle="message">
-	    	<h5>This is a message</h5>
-	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-	    </a>
-	  </li>
-	  <li>
-	    <a zf-toggle="message">
-	    	<h5>This is a message</h5>
-	    	<p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-	    </a>
-	  </li>
-  </section>
+	</section>
 </div>
 
-<div zf-panel id="message" position="right" class="fast bounceInOut small-12 medium-6 medium-grid-content">
+<div zf-panel id="message" position="right" class="fast spinIn linear wiggle small-12 medium-6 medium-grid-content">
   <a class="hide-for-medium button tiny" zf-close="message">Back</a>
-  <h2>This is a message</h2>
-  <p>Mike Meyers - 6/12/2014</p>
+  <h2>A Message from the Coder</h2>
+  <p>jjdemtiriuk @ relutionDev - 15/02/2015</p>
   <hr />
-  <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+  <p>Welcome to foundationUltra here is our demo to show off some of the elements that foundationUltra has to offer from not only foundationApps such as the new flexbox grid but also foundationSites and angular-foundation aswell as increasing the range of icons by using font-awesome
 	</p>
-	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	<p>If you are viewing this on a desktop then you should see 3 columns of data, a sidebar the messages and then this panel. If you make the screen smaller or view this on your phone or tablet then you will see the magic happen, the topbar will turn into its famous mobile format aswell as the new elements such as the side bar turning in offcanvas panel that slide on. Go on give it a try
 	</p>
-	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
+	<p>Heres What included: (So Far)
+  <ul>
+    <li>The new flexbox grid<li>
+  </ul>
 	</p>
 	<p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
 	</p>
