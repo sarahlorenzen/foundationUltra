@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/RelutionDev/foundationUltra/issues"
   },
-  "homepage": "https://github.com/RelutionDev/foundationUltra"
+  "homepage": "https://github.com/RelutionDev/foundationUltra",
+  "dependencies": {
+        "grunt": "^0.4.5",
+        "grunt-bower-task": "^0.4.0",
+        "grunt-contrib-copy": "^0.7.0",
+        "grunt-contrib-sass": "^0.8.1",
+        "grunt-contrib-watch": "^0.6.1"
+    }
 }
