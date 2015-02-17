@@ -8,11 +8,8 @@ $foundation-version: '1.0.2';
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
-// Libraries (let's make Normalize an external dependency eventually)
-@import
-  "vendor/normalize";
   
-@import "foundationApps/settings";
+//@import "foundationApps/settings";
 
 // Helpers
 @import

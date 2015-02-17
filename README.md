@@ -54,17 +54,17 @@ To say the least this has annoyed me because my existing project used topbar as 
 
 ## Usage
 
-Simply Clone or Download this repo and unpack into your location 
+    Simply Clone or Download this repo and unpack into your location 
 
-npm install -g grunt-cli bower
+    npm install -g grunt-cli bower
 
-npm install - this will install all grunt tasks
+    npm install - this will install all grunt tasks
 
-grunt - this will build the project from the assets
+    grunt - this will build the project from the assets
 
-grunt watch - this will watch of SCSS changes ONLY 
+    grunt watch - this will watch of SCSS changes ONLY 
 
-grunt sass - will compile the scss into css
+    grunt sass - will compile the scss into css
 
 ## Documentation
 

@@ -116,8 +116,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'css/fontawesome.css': 'scss/fontawesome/font-awesome.scss',
-                    'css/foundation.css': 'scss/foundationSites/foundation.scss',
-                    'css/foundationApps.css': 'scss/foundationApps/foundation.scss'
+                    'css/foundationUltra.css': 'scss/foundationUltra.scss'
                 }
             }
         },

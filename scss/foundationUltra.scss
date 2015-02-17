@@ -1,0 +1,81 @@
+/* 
+    FoundationUltra
+    ---------------
+    Created on : 17-Feb-2015, 13:09:58
+    Author     : jjdemitriuk
+*/
+
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Here we shall have dependencies
+// Libraries (let's make Normalize an external dependency eventually)
+@import
+  "vendor/normalize";
+  
+// Some Dependencies Ive added
+@import "font-awesome";
+  
+// Here is the combined settings file
+@import "ultraSettings";
+
+$foundation-version: '1.0.2';
+
+// Helpers
+@import
+  "helpers/functions",
+  "helpers/mixins",
+  "helpers/breakpoints",
+  "helpers/images";
+
+// Here we shall include foundationSites Elements as they need to come first
+@import "foundation/components/accordion";
+@import "foundation/components/breadcrumbs";
+@import "foundation/components/clearing";
+@import "foundation/components/dropdown";
+@import "foundation/components/flex-video";
+@import "foundation/components/icon-bar";
+@import "foundation/components/inline-lists";
+@import "foundation/components/joyride";
+@import "foundation/components/orbit";
+@import "foundation/components/pagination";
+@import "foundation/components/pricing-tables";
+@import "foundation/components/side-nav";
+@import "foundation/components/sub-nav";
+@import "foundation/components/tables";
+@import "foundation/components/tooltips";
+ 
+// Here we have foundation for apps
+
+// Global styles
+@import
+  "global";
+
+// Components
+@import
+  "components/iconic",
+  "components/action-sheet",
+  "components/block-list",
+  "components/button",
+  "components/button-group",
+  "components/card",
+  "components/extras",
+  "components/forms",
+  "components/grid",
+  "components/title-bar",
+  "components/label",
+  "components/list",
+  "components/menu-bar",
+  "components/modal",
+  "components/motion",
+  "components/notification",
+  "components/off-canvas",
+  "components/popup",
+  "components/switch",
+  "components/tabs",
+  "components/accordion",
+  "components/typography",
+  "components/utilities";
+
+@import "foundation/components/top-bar";
