@@ -11,6 +11,8 @@ $foundation-version: '1.0.2';
 // Libraries (let's make Normalize an external dependency eventually)
 @import
   "vendor/normalize";
+  
+@import "foundationApps/settings";
 
 // Helpers
 @import

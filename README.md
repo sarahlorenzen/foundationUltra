@@ -50,11 +50,21 @@ To say the least this has annoyed me because my existing project used topbar as 
 - foundationSites Keystrokes
 - foundationSites Panels (Going to rename contentPane)
 - foundationSites Tables
-- font-awesome to add more icons to the system as I think 24 isnt enough for the modern day web developer
+- font-awesome to add more icons to the system as I think 24 isn't enough for the modern day web developer
 
-## Useage
+## Usage
 
-Simply Clone or Download this repo and unpack into your location everything at the momment is pretty stand alone and not very easy to edit as alot is statically coded rather than dynamic but im working on it 
+Simply Clone or Download this repo and unpack into your location 
+
+npm install -g grunt-cli bower
+
+npm install - this will install all grunt tasks
+
+grunt - this will build the project from the assets
+
+grunt watch - this will watch of SCSS changes ONLY 
+
+grunt sass - will compile the scss into css
 
 ## Documentation
 

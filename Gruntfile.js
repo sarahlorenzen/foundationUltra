@@ -110,7 +110,8 @@ module.exports = function (grunt) {
                         // Path to foundation Sites
                         'scss/foundationSites/',
                         // Path to foundation Apps
-                        'scss/foundationApps/'
+                        'scss/foundationApps/',
+                        'scss/'
                     ]
                 },
                 files: {
@@ -123,7 +124,7 @@ module.exports = function (grunt) {
         watch: {
             // Watch for changes to any scss file 
             sass: {
-                files: ['scss/*'],
+                files: ['scss/**'],
                 tasks: ['sass'],
                 options: {
                 }
